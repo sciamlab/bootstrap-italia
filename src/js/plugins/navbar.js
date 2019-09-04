@@ -1,24 +1,24 @@
 $(function() {
   // open / close navbar actions
-  var openbutton = $('.custom-navbar-toggler')
+  /*var openbutton = $('.custom-navbar-toggler')
   var closebutton = $('.close-div')
   var overlay = $('.overlay')
   var backbutton = $('.it-back-button')
-  var navlink = $('.navbar-collapsable a')
+  var navlink = $('.navbar-collapsable a')*/
 
   //-open button action
-  $(openbutton).on('click', function(event) {
+  $(document).on('click','.custom-navbar-toggler', function(event) {
     /* Act on the event */
     var target = $(this).attr('data-target')
     var fadelayer = $(target).find('.overlay')
     $(this).attr('aria-expanded', 'true')
-    $(backbutton).fadeIn()
+    $('.it-back-button').fadeIn()
     $(target).show()
     $(fadelayer).fadeIn()
     $(target).addClass('expanded')
   })
 
-  $(overlay).on('click', function() {
+  $(document).on('click','.overlay', function() {
     var target = $(this).closest('.navbar-collapsable')
     var buttonrel = $(this)
       .closest('.navbar')
@@ -34,7 +34,7 @@ $(function() {
   })
 
   //-close button action
-  $(closebutton).on('click', function(event) {
+  $(document).on('click','.close-div', function(event) {
     var target = $(this).closest('.navbar-collapsable')
     var buttonrel = $(this)
       .closest('.navbar')
@@ -51,7 +51,7 @@ $(function() {
   })
 
   //-- (a fine elenco viene chiuso il menù ed il focus passa all'elemento successivo)
-  $(navlink).on('blur', function(event) {
+  $(document).on('blur','.navbar-collapsable a', function(event) {
     closemenu = $(this)
       .closest('.navbar-collapsable')
       .find('.close-div .btn') // determino il pulsante di chiusura
@@ -75,7 +75,7 @@ $(function() {
   })
 
   //-- (a inizio elenco tabbando indietro, dopo il close chiudo il menu)
-  $(closebutton).on('blur', function(event) {
+  $(document).on('blur','.close-div', function(event) {
     closemenu = $(this)
     /* Act on the event */
     if (
