@@ -31,7 +31,7 @@
     right: 0;
     left: 0;
     bottom: 0;
-    z-index: 1;
+    z-index: 3;
     //background: $navigation-sidebar-bg-color-mobile;
     display: none;
     width: 100%; //-occupa sempre tutta lo spazio orizzontale disponibile
@@ -307,18 +307,18 @@
     padding: 0;
     // navbar mobile
     .navbar-collapsable {
-      position: relative;
+     /* position: relative;
       top: auto;
       right: auto;
       left: auto;
       bottom: auto;
       z-index: auto;
       background: none;
-      display: block !important; //-sovrascrive l'inline style di jquery
-      transition: none;
+      //display: block !important; //-sovrascrive l'inline style di jquery
+      transition: none;*/
 
       .overlay {
-        display: none !important;
+        //display: none !important;
       }
 
       // menu vrapper
@@ -461,7 +461,7 @@
     }
   }
   .custom-navbar-toggler {
-    display: none;
+   /* display: none;*/
   }
   .has-megamenu {
     .navbar-collapsable {
@@ -488,7 +488,7 @@
         opacity: 0;
         display: block;
         transition: opacity $dropdown-menu-animation-speed/2
-          cubic-bezier(0.1, 0.57, 0.36, 0.99);
+        cubic-bezier(0.1, 0.57, 0.36, 0.99);
       }
     }
 
