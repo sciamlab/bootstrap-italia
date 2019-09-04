@@ -218,7 +218,7 @@ $dropdown-menu-notch-base-size: 6px;
 $dropdown-menu-notch-position-x: 24px;
 
 //Navigation
-$navbar-bg-color: $color-primary;
+$navbar-bg-color: $color-primary !default;
 $navigation-bg-color: #fff;
 $navigation-bg-color-desktop: $color-primary;
 
@@ -243,9 +243,8 @@ $navigation-disabled-item-opacity: 0.5;
 $navigation-hamburger-size: 24px;
 
 // navigation dark theme (mobile)
-$navigation-dark-bg-color: $color-primary;
+$navigation-dark-bg-color: $color-primary !default;
 $navigation-dark-text-color: #fff;
-$navigation-dark-bg-color: $primary-b1;
 $navigation-dark-separator-color: $primary-c5;
 //$navigation-dark-megamenu-separator-color:
 
@@ -422,7 +421,7 @@ $header-slim-theme-light-button-color: $primary;
 $header-slim-theme-light-button-hover-color: $primary-a6;
 $header-slim-height: 48px;
 //header-center
-$header-center-bg-color: $primary-a6;
+$header-center-bg-color: $primary-a6 !default;
 $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
