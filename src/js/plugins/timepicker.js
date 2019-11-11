@@ -1,8 +1,18 @@
 // key numbers
+
+/**
+ * timepicker function
+ */
+
+;(function($) {
+  'use strict'
+
+  var Timepicker = function($object){
+
 var numbers = [48, 49, 50, 51, 52, 53, 54, 55, 56, 57]
 var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
 
-$(document).ready(function() {
+
   function allowKey(key) {
     return [8, 9, 13].includes(key)
   }
@@ -48,7 +58,7 @@ $(document).ready(function() {
   }
 
 
-  function inizialize(index) {
+  function initialize(index) {
     //GLOBAL VARIABLES
     var valMin,
       valMax,
@@ -268,7 +278,20 @@ $(document).ready(function() {
     $spinner.on('click', e => {
       e.stopPropagation()
     })
+    return this
   }
-  // Loop each input field
-  $('.it-timepicker-wrapper').each(inizialize(index))
+    return initialize.call(this)
+  }
+
+  $.fn.timepicker = function() {
+    return this.each(function() {
+      new Timepicker($(this), $(this).data())
+    })
+  }
+})(jQuery)
+$(function() {
+  $(document).ready(function() {
+    // Loop each input field
+    $('.it-timepicker-wrapper').timepicker();
+  })
 })
