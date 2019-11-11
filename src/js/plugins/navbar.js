@@ -52,7 +52,7 @@ $(function() {
 
   //-- (a fine elenco viene chiuso il menù ed il focus passa all'elemento successivo)
   $(document).on('blur','.navbar-collapsable a', function(event) {
-    closemenu = $(this)
+    var closemenu = $(this)
       .closest('.navbar-collapsable')
       .find('.close-div .btn') // determino il pulsante di chiusura
     /* Act on the event */
@@ -76,7 +76,7 @@ $(function() {
 
   //-- (a inizio elenco tabbando indietro, dopo il close chiudo il menu)
   $(document).on('blur','.close-div', function(event) {
-    closemenu = $(this)
+    var closemenu = $(this)
     /* Act on the event */
     if (
       $(this)
