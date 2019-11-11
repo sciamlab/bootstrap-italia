@@ -59,6 +59,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
 
 
   function initialize() {
+
     //GLOBAL VARIABLES
     var valMin,
       valMax,
@@ -69,7 +70,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
       timeM = '00'
 
     // wrapper el
-    var $el = $(this)
+    var $el = $object
 
     // get input field
     var $input = $el.find('.txtTime')
@@ -285,7 +286,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
 
   $.fn.timepicker = function() {
     return this.each(function() {
-      new Timepicker($(this), $(this).data())
+      new Timepicker($(this))
     })
   }
 })(jQuery)
