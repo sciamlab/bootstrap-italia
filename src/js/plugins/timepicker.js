@@ -24,7 +24,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
       .fadeIn(100)
   }
 
-  function hideSpinner($spinner, $input, $spinnerH, $spinnerM, index) {
+  function hideSpinner($spinner, $input, $spinnerH, $spinnerM) {
     if ($spinner.hasClass('is-open')) {
       $spinner
         .fadeOut(100)
@@ -34,7 +34,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
         var newTime = $spinnerH.attr('value') + ':' + $spinnerM.attr('value')
         $input.val(newTime)
       }
-      checkForm($input, index)
+      checkForm($input)
     }
   }
 
@@ -42,7 +42,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
   var defLabels = {}
 
   // TIME VALIDATION FOR DATA ENTRY
-  function checkForm($input, index) {
+  function checkForm($input) {
     var newValue = $input.val()
     if (newValue) {
       var $label = $input.siblings('label')
@@ -50,7 +50,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
       var matches = newValue != '' ? newValue.match(timeRegEx) : ''
 
       if (matches) {
-        $label.removeClass('error-label').html(defLabels[index])
+        $label.removeClass('error-label').html(defLabels)
       } else {
         $label.addClass('error-label').html('Formato ora non valido (hh:mm)')
       }
@@ -58,7 +58,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
   }
 
 
-  function initialize(index) {
+  function initialize() {
     //GLOBAL VARIABLES
     var valMin,
       valMax,
@@ -151,7 +151,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
       handleClick(null, $button)
     }
 
-    defLabels[index] = $input.siblings('label').text()
+    defLabels = $input.siblings('label').text()
 
     $el
       .find('.spinner-control button')
@@ -161,7 +161,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
     $btnTime.on('click', e => {
       e.stopPropagation()
       if ($spinner.hasClass('is-open')) {
-        hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
+        hideSpinner($spinner, $input, $spinnerH, $spinnerM)
       } else {
         loadSpinner($spinner)
       }
@@ -191,19 +191,19 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
         }
 
         if (key === 13) {
-          return checkForm($input, index)
+          return checkForm($input)
         }
       })
       .on('focus', e => {
         e.stopPropagation()
         if ($input.val()) {
-          checkForm($input, index)
+          checkForm($input)
         }
       })
       .on('blur', e => {
         // console.log('$input blur')
         if ($input.val()) {
-          checkForm($input, index)
+          checkForm($input)
         }
       })
 
@@ -272,7 +272,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
       })
 
     $(document).on('click', e => {
-      hideSpinner($spinner, $input, $spinnerH, $spinnerM, index)
+      hideSpinner($spinner, $input, $spinnerH, $spinnerM)
     })
 
     $spinner.on('click', e => {
