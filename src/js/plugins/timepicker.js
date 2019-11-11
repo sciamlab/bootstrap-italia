@@ -47,8 +47,8 @@ $(document).ready(function() {
     }
   }
 
-  // Loop each input field
-  $('.it-timepicker-wrapper').each(function(index) {
+
+  function inizialize(index) {
     //GLOBAL VARIABLES
     var valMin,
       valMax,
@@ -268,5 +268,7 @@ $(document).ready(function() {
     $spinner.on('click', e => {
       e.stopPropagation()
     })
-  })
+  }
+  // Loop each input field
+  $('.it-timepicker-wrapper').each(inizialize(index))
 })
