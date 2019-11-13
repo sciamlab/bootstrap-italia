@@ -5,6 +5,7 @@ $(function() {
   var overlay = $('.overlay')
   var backbutton = $('.it-back-button')
   var navlink = $('.navbar-collapsable a')*/
+  var closemenu;
 
   //-open button action
   $(document).on('click','.custom-navbar-toggler', function(event) {
@@ -52,7 +53,7 @@ $(function() {
 
   //-- (a fine elenco viene chiuso il menù ed il focus passa all'elemento successivo)
   $(document).on('blur','.navbar-collapsable a', function(event) {
-    var closemenu = $(this)
+    closemenu = $(this)
       .closest('.navbar-collapsable')
       .find('.close-div .btn') // determino il pulsante di chiusura
     /* Act on the event */
@@ -76,7 +77,7 @@ $(function() {
 
   //-- (a inizio elenco tabbando indietro, dopo il close chiudo il menu)
   $(document).on('blur','.close-div', function(event) {
-    var closemenu = $(this)
+    closemenu = $(this)
     /* Act on the event */
     if (
       $(this)
