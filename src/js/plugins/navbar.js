@@ -77,7 +77,7 @@ $(function() {
 
   //-- (a inizio elenco tabbando indietro, dopo il close chiudo il menu)
   $(document).on('blur','.close-div', function(event) {
-    closemenu = $(this)
+    closemenu = $(this);
     /* Act on the event */
     if (
       $(this)
