@@ -312,9 +312,9 @@ $(function() {
       }
     })
 
-  $('.input-password-strength-meter').password()
+  $('.input-password-strength-meter').password();
 
-  $('.password-icon').on('click', function(e) {
+  $(document).on('click','.password-icon', function(e) {
     $(this)
       .find('[class^="password-icon"]')
       .toggleClass('d-none')
