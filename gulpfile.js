@@ -55,7 +55,7 @@ const Paths = {
     'src/js/plugins/progress-donut.js',
     'src/js/plugins/list.js',
     'src/js/plugins/imgresponsive.js',
-    //'src/js/plugins/timepicker.js',
+    'src/js/plugins/timepicker.js',
     'src/js/plugins/input-number.js',
     'src/js/plugins/carousel.js',
     'src/js/plugins/transfer.js',
@@ -80,11 +80,11 @@ const Paths = {
 }
 
 const bootstrapItaliaBanner = [
-  '/**',
+  '/*!',
   ' * ' + pkg.description,
   ' * @version v' + pkg.version,
   ' * @link ' + pkg.homepage,
-  ' * @license ' +pkg.license,
+  ' * @license ' + pkg.license,
   ' */',
   '',
 ].join('\n')
@@ -106,16 +106,16 @@ const jqueryVersionCheck =
 gulp.task('scss-min', () => {
   return gulp
     .src(Paths.SOURCE_SCSS)
+    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(
       cleanCSS({
         level: 2,
-        specialComments: 0,
+        specialComments: 'all',
       })
     )
-    .pipe(gap.prependText(bootstrapItaliaBanner))
     .pipe(
       rename({
         suffix: '.min',
@@ -149,14 +149,16 @@ gulp.task('js-min', () => {
       })
     )
     .pipe(uglify())
-    .pipe(gap.prependText(
-      bootstrapItaliaBanner +
-        '\n' +
-        jqueryCheck +
-        '\n' +
-        jqueryVersionCheck +
-        '\n+function () {\n'
-    ))
+    .pipe(
+      gap.prependText(
+        bootstrapItaliaBanner +
+          '\n' +
+          jqueryCheck +
+          '\n' +
+          jqueryVersionCheck +
+          '\n+function () {\n'
+      )
+    )
     .pipe(gap.appendText('\n}();\n'))
     .pipe(
       rename({

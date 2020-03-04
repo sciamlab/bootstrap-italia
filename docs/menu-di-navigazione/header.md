@@ -43,13 +43,13 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
               </a>
               <div class="link-list-wrapper collapse" id="menu1">
                 <ul class="link-list">
-                  <li><a href="#">Link 1</a></li>
-                  <li><a class="active" href="#">Link 2 Active</a></li>
+                  <li><a class="list-item" href="#">Link 1</a></li>
+                  <li><a class="list-item active" href="#">Link 2 Active</a></li>
                 </ul>
               </div>
             </nav>
           </div>
-          <div class="header-slim-right-zone">
+          <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>Ita</span>
@@ -71,7 +71,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ Il **cambio lingua** è gestito con il componente [**dropdown**]({{ site.baseurl
 
 #### Right action con bottone full responsive
 
-Per trasformare il bottone di _action_ situato nella `header-slim-right-zone` e renderlo **full-responsive** è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
+Per trasformare il bottone di _action_ situato nell'elemento identificato con `.it-header-slim-right-zone` e renderlo **full-responsive** è sufficiente applicare la classe `.btn-full` alla classe `.btn` del link/bottone.
 
 Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da `.theme-light`.
 
@@ -95,7 +95,7 @@ Il modificatore `.btn-full` è disponibile anche con il tema chiaro attivato da 
         <div class="col-12">
           <div class="it-header-slim-wrapper-content">
             <a class="d-lg-block navbar-brand" href="#">Nome della Regione</a>
-            <div class="header-slim-right-zone">
+            <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a
                   class="nav-link dropdown-toggle"
@@ -171,13 +171,13 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               </a>
               <div class="link-list-wrapper collapse" id="menu2">
                 <ul class="link-list">
-                  <li><a href="#">Link 1</a></li>
-                  <li><a class="active" href="#">Link 2 Active</a></li>
+                  <li><a class="list-item" href="#">Link 1</a></li>
+                  <li><a class="list-item active" href="#">Link 2 Active</a></li>
                 </ul>
               </div>
             </nav>
           </div>
-          <div class="header-slim-right-zone">
+          <div class="it-header-slim-right-zone">
             <div class="nav-item dropdown">
               <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                 <span>ITA</span>
@@ -199,7 +199,7 @@ Per cambiare tema all'header slim è sufficiente aggiungere la classe `theme-lig
               </div>
             </div>
             <div class="it-access-top-wrapper">
-              <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+              <a class="btn btn-primary btn-sm" href="#">Accedi</a>
             </div>
           </div>
         </div>
@@ -946,13 +946,13 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 </a>
                 <div class="link-list-wrapper collapse" id="menu4">
                   <ul class="link-list">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a class="active" href="#">Link 2 Active</a></li>
+                    <li><a class="list-item" href="#">Link 1</a></li>
+                    <li><a class="list-item active" href="#">Link 2 Active</a></li>
                   </ul>
                 </div>
               </nav>
             </div>
-            <div class="header-slim-right-zone">
+            <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                   <span>ITA</span>
@@ -974,7 +974,7 @@ Al menù di navigazione principale può essere aggiunto anche un menù di naviga
                 </div>
               </div>
               <div class="it-access-top-wrapper">
-                <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
               </div>
             </div>
           </div>
@@ -1168,13 +1168,13 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 </a>
                 <div class="link-list-wrapper collapse" id="menu3">
                   <ul class="link-list">
-                    <li><a href="#">Link 1</a></li>
-                    <li><a class="active" href="#">Link 2 Active</a></li>
+                    <li><a class="list-item" href="#">Link 1</a></li>
+                    <li><a class="list-item active" href="#">Link 2 Active</a></li>
                   </ul>
                 </div>
               </nav>
             </div>
-            <div class="header-slim-right-zone">
+            <div class="it-header-slim-right-zone">
               <div class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" aria-expanded="false">
                   <span>ITA</span>
@@ -1196,7 +1196,7 @@ Verrà creata un ombra per enfatizzarlo rispetto alla pagina in cui è contenuto
                 </div>
               </div>
               <div class="it-access-top-wrapper">
-                <button class="btn btn-primary btn-sm" href="#" type="button">Accedi</button>
+                <a class="btn btn-primary btn-sm" href="#">Accedi</a>
               </div>
             </div>
           </div>
