@@ -418,11 +418,9 @@ $header-slim-theme-light-bg-color: $white;
 $header-slim-theme-light-text-color: $primary-a7;
 $header-slim-theme-light-button-color: $primary;
 $header-slim-theme-light-button-hover-color: $primary-a6;
-
-// Header Center
-// "!default"s here allows customising $header-center background and text colours as it's the most recognizable element.
+$header-slim-height: 48px;
+//header-center
 $header-center-bg-color: $primary-a6 !default;
-$header-center-text-color: $white !default;
 $header-center-max-height: 120px;
 $header-center-max-height-mob: 80px;
 $header-center-pad: 47px;
