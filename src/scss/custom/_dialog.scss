@@ -39,7 +39,7 @@
       .modal-content {
         .modal-header {
           justify-content: left;
-          align-items: top;
+          align-items: start;
           .icon {
             fill: $modal-icon-color;
             margin-right: $modal-icon-distance;
@@ -77,14 +77,14 @@
             .link-list {
               margin-bottom: 0;
               padding-bottom: $modal-padding;
-              li {
-                a {
-                  padding: 0;
-                  svg {
-                    margin-right: $v-gap;
-                  }
-                }
-              }
+              // li {
+              //   a {
+              //     padding: 0;
+              //     svg {
+              //       margin-right: $v-gap;
+              //     }
+              //   }
+              // }
             }
           }
         }

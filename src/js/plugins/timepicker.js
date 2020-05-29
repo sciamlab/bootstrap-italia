@@ -142,7 +142,7 @@ var timeRegEx = /^([01]?[0-9]|2[0-3]):[0-5][0-9]$/i
       $spinnerInput.attr('value', setDigit(valNow))
       $spinnerInput.attr('aria-valuenow', setDigit(valNow))
 
-      $input.val(timeH + ':' + timeM)
+      $input.val(timeH + ':' + timeM).change()
     }
 
     var handleType = ($spinnerInput, $button) => {
